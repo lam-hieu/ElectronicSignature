@@ -1,6 +1,6 @@
 ﻿namespace ChuKyDienTu
 {
-    partial class FrmKyVanBan
+    partial class FrmDocFilePDF
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmKyVanBan));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmDocFilePDF));
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.richEditControl1 = new DevExpress.XtraRichEdit.RichEditControl();
             this.ribbonControl1 = new DevExpress.XtraBars.Ribbon.RibbonControl();
@@ -78,19 +78,8 @@
             this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.repositoryItemTextEdit6 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             this.label1 = new System.Windows.Forms.Label();
-            this.ribbonPage3 = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.ribbonPageGroup6 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem5 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem7 = new DevExpress.XtraBars.BarButtonItem();
-            this.ribbonPageGroup7 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.barButtonItem8 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem9 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem10 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem11 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem12 = new DevExpress.XtraBars.BarButtonItem();
-            this.ribbonPageGroup8 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.barButtonItem13 = new DevExpress.XtraBars.BarButtonItem();
+            this.pdfViewer1 = new DevExpress.XtraPdfViewer.PdfViewer();
+            this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
@@ -107,16 +96,19 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditSHA.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
             // 
+            this.layoutControl1.Controls.Add(this.pdfViewer1);
             this.layoutControl1.Controls.Add(this.richEditControl1);
             this.layoutControl1.Controls.Add(this.memoEditChuKy);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layoutControl1.Location = new System.Drawing.Point(0, 193);
             this.layoutControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.layoutControl1.Name = "layoutControl1";
+            this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(729, 290, 812, 500);
             this.layoutControl1.Root = this.layoutControlGroup1;
             this.layoutControl1.Size = new System.Drawing.Size(1522, 590);
             this.layoutControl1.TabIndex = 0;
@@ -158,19 +150,12 @@
             this.barSubItem3,
             this.barDockingMenuItem1,
             this.barEditItem2,
-            this.barEditItem5,
-            this.barButtonItem5,
-            this.barButtonItem7,
-            this.barButtonItem8,
-            this.barButtonItem9,
-            this.barButtonItem12,
-            this.barButtonItem13});
+            this.barEditItem5});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 31;
+            this.ribbonControl1.MaxItemId = 25;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
-            this.ribbonPage1,
-            this.ribbonPage3});
+            this.ribbonPage1});
             this.ribbonControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemTextEdit1,
             this.repositoryItemTextEdit2,
@@ -188,7 +173,7 @@
             this.BarBtnNapKhoa.Id = 1;
             this.BarBtnNapKhoa.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("BarBtnNapKhoa.ImageOptions.SvgImage")));
             this.BarBtnNapKhoa.Name = "BarBtnNapKhoa";
-            this.BarBtnNapKhoa.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BarBtnNapKhoa_ItemClick);
+            //this.BarBtnNapKhoa.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BarBtnNapKhoa_ItemClick);
             // 
             // barSubItem1
             // 
@@ -202,7 +187,7 @@
             this.BarBtnLamMoi.Id = 3;
             this.BarBtnLamMoi.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("BarBtnLamMoi.ImageOptions.SvgImage")));
             this.BarBtnLamMoi.Name = "BarBtnLamMoi";
-            this.BarBtnLamMoi.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BarBtnLamMoi_ItemClick);
+           // this.BarBtnLamMoi.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BarBtnLamMoi_ItemClick);
             // 
             // BarBtnTaiVanBan
             // 
@@ -334,7 +319,7 @@
             // 
             // BarBtnTaiFilePDF
             // 
-            this.BarBtnTaiFilePDF.Caption = "Load PDF";
+            this.BarBtnTaiFilePDF.Caption = "Tải PDF";
             this.BarBtnTaiFilePDF.Id = 18;
             this.BarBtnTaiFilePDF.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("BarBtnTaiFilePDF.ImageOptions.SvgImage")));
             this.BarBtnTaiFilePDF.Name = "BarBtnTaiFilePDF";
@@ -447,10 +432,10 @@
             // 
             // memoEditChuKy
             // 
-            this.memoEditChuKy.Location = new System.Drawing.Point(12, 32);
+            this.memoEditChuKy.Location = new System.Drawing.Point(12, 532);
             this.memoEditChuKy.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.memoEditChuKy.Name = "memoEditChuKy";
-            this.memoEditChuKy.Size = new System.Drawing.Size(1498, 522);
+            this.memoEditChuKy.Size = new System.Drawing.Size(1498, 22);
             this.memoEditChuKy.StyleController = this.layoutControl1;
             this.memoEditChuKy.TabIndex = 10;
             // 
@@ -460,7 +445,8 @@
             this.layoutControlGroup1.GroupBordersVisible = false;
             this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlItem7,
-            this.layoutControlItem2});
+            this.layoutControlItem2,
+            this.layoutControlItem1});
             this.layoutControlGroup1.Name = "Root";
             this.layoutControlGroup1.Size = new System.Drawing.Size(1522, 590);
             this.layoutControlGroup1.TextVisible = false;
@@ -468,9 +454,9 @@
             // layoutControlItem7
             // 
             this.layoutControlItem7.Control = this.memoEditChuKy;
-            this.layoutControlItem7.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlItem7.Location = new System.Drawing.Point(0, 500);
             this.layoutControlItem7.Name = "layoutControlItem7";
-            this.layoutControlItem7.Size = new System.Drawing.Size(1502, 546);
+            this.layoutControlItem7.Size = new System.Drawing.Size(1502, 46);
             this.layoutControlItem7.Text = "Chữ ký điện tử";
             this.layoutControlItem7.TextLocation = DevExpress.Utils.Locations.Top;
             this.layoutControlItem7.TextSize = new System.Drawing.Size(108, 17);
@@ -518,100 +504,24 @@
             this.label1.TabIndex = 10;
             this.label1.Text = "Hash SHA-256";
             // 
-            // ribbonPage3
+            // pdfViewer1
             // 
-            this.ribbonPage3.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.ribbonPageGroup6,
-            this.ribbonPageGroup7,
-            this.ribbonPageGroup8});
-            this.ribbonPage3.Name = "ribbonPage3";
-            this.ribbonPage3.Text = "Đọc File PDF";
+            this.pdfViewer1.Location = new System.Drawing.Point(12, 12);
+            this.pdfViewer1.MenuManager = this.ribbonControl1;
+            this.pdfViewer1.Name = "pdfViewer1";
+            this.pdfViewer1.Size = new System.Drawing.Size(1498, 496);
+            this.pdfViewer1.TabIndex = 12;
             // 
-            // ribbonPageGroup6
+            // layoutControlItem1
             // 
-            this.ribbonPageGroup6.ItemLinks.Add(this.barButtonItem5);
-            this.ribbonPageGroup6.ItemLinks.Add(this.barButtonItem7);
-            this.ribbonPageGroup6.Name = "ribbonPageGroup6";
-            this.ribbonPageGroup6.Text = "Add";
+            this.layoutControlItem1.Control = this.pdfViewer1;
+            this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlItem1.Name = "layoutControlItem1";
+            this.layoutControlItem1.Size = new System.Drawing.Size(1502, 500);
+            this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem1.TextVisible = false;
             // 
-            // barButtonItem3
-            // 
-            this.barButtonItem3.Caption = "Tải PDF";
-            this.barButtonItem3.Id = 18;
-            this.barButtonItem3.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem3.ImageOptions.SvgImage")));
-            this.barButtonItem3.Name = "barButtonItem3";
-            // 
-            // barButtonItem5
-            // 
-            this.barButtonItem5.Caption = "Tải File PDF";
-            this.barButtonItem5.Id = 25;
-            this.barButtonItem5.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem5.ImageOptions.SvgImage")));
-            this.barButtonItem5.Name = "barButtonItem5";
-            // 
-            // barButtonItem7
-            // 
-            this.barButtonItem7.Caption = "Lưu File";
-            this.barButtonItem7.Id = 26;
-            this.barButtonItem7.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem7.ImageOptions.SvgImage")));
-            this.barButtonItem7.Name = "barButtonItem7";
-            // 
-            // ribbonPageGroup7
-            // 
-            this.ribbonPageGroup7.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("ribbonPageGroup7.ImageOptions.SvgImage")));
-            this.ribbonPageGroup7.ItemLinks.Add(this.barButtonItem8);
-            this.ribbonPageGroup7.Name = "ribbonPageGroup7";
-            this.ribbonPageGroup7.Text = "Sign";
-            // 
-            // barButtonItem8
-            // 
-            this.barButtonItem8.Caption = "Ký File";
-            this.barButtonItem8.Id = 27;
-            this.barButtonItem8.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem8.ImageOptions.SvgImage")));
-            this.barButtonItem8.Name = "barButtonItem8";
-            // 
-            // barButtonItem9
-            // 
-            this.barButtonItem9.Caption = "Lưu Chữ Ký";
-            this.barButtonItem9.Id = 28;
-            this.barButtonItem9.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem9.ImageOptions.SvgImage")));
-            this.barButtonItem9.Name = "barButtonItem9";
-            this.barButtonItem9.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem9_ItemClick);
-            // 
-            // barButtonItem10
-            // 
-            this.barButtonItem10.Caption = "Ký File";
-            this.barButtonItem10.Id = 27;
-            this.barButtonItem10.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem10.ImageOptions.SvgImage")));
-            this.barButtonItem10.Name = "barButtonItem10";
-            // 
-            // barButtonItem11
-            // 
-            this.barButtonItem11.Caption = "Ký File";
-            this.barButtonItem11.Id = 27;
-            this.barButtonItem11.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem11.ImageOptions.SvgImage")));
-            this.barButtonItem11.Name = "barButtonItem11";
-            // 
-            // barButtonItem12
-            // 
-            this.barButtonItem12.Caption = "Lưu Chữ Ký";
-            this.barButtonItem12.Id = 29;
-            this.barButtonItem12.Name = "barButtonItem12";
-            // 
-            // ribbonPageGroup8
-            // 
-            this.ribbonPageGroup8.ItemLinks.Add(this.barButtonItem13);
-            this.ribbonPageGroup8.Name = "ribbonPageGroup8";
-            this.ribbonPageGroup8.Text = "ribbonPageGroup8";
-            // 
-            // barButtonItem13
-            // 
-            this.barButtonItem13.Caption = "Lưu Sign";
-            this.barButtonItem13.Id = 30;
-            this.barButtonItem13.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem13.ImageOptions.SvgImage")));
-            this.barButtonItem13.Name = "barButtonItem13";
-            this.barButtonItem13.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem13_ItemClick);
-            // 
-            // FrmKyVanBan
+            // FrmDocFilePDF
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -622,9 +532,9 @@
             this.Controls.Add(this.progressBar);
             this.Controls.Add(this.textEditSHA);
             this.Controls.Add(this.ribbonControl1);
-            this.IconOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("FrmKyVanBan.IconOptions.LargeImage")));
+            this.IconOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("FrmDocFilePDF.IconOptions.LargeImage")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Name = "FrmKyVanBan";
+            this.Name = "FrmDocFilePDF";
             this.Ribbon = this.ribbonControl1;
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -647,6 +557,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditSHA.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -703,18 +614,7 @@
         private System.Windows.Forms.Label label1;
         private DevExpress.XtraRichEdit.RichEditControl richEditControl1;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem5;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem7;
-        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage3;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup6;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem3;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem8;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem9;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup7;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem10;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem11;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem12;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem13;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup8;
+        private DevExpress.XtraPdfViewer.PdfViewer pdfViewer1;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
     }
 }
