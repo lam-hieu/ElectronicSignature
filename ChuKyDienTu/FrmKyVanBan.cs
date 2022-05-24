@@ -41,7 +41,7 @@ namespace ChuKyDienTu
         private void Openfile()
         {
             ofd.Multiselect = false;
-            ofd.Filter = "Word Document (*.doc)|*.doc|Document files (*.txt)|*.txt|Rich text files (*.rtf)|*.rtf|All files (*.*)|*.*";
+            ofd.Filter = "Word Document (*.doc)|*.doc|Document files (*.txt)|*.txt|Rich text files (*.rtf)|*.rtf";
             ofd.FilterIndex = 1;
             ofd.FileName = string.Empty;
             if ((ofd.ShowDialog() != DialogResult.Cancel) && (ofd.FileName != ""))
@@ -283,21 +283,6 @@ namespace ChuKyDienTu
         }
 
         private void textEditN_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-
-        }
-        private void BarBtnTaiFilePDF_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            FrmDocFilePDF f = new FrmDocFilePDF();
-            f.Show();
-        }
-
-        private void barButtonItem9_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-
-        }
-
-        private void barButtonItem13_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
 
         }

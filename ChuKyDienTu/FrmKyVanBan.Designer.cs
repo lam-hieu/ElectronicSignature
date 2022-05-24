@@ -30,7 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmKyVanBan));
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
-            this.richEditControl1 = new DevExpress.XtraRichEdit.RichEditControl();
+            this.memoEditChuKy = new DevExpress.XtraEditors.MemoEdit();
+            this.richEditControlVanBan = new DevExpress.XtraRichEdit.RichEditControl();
             this.ribbonControl1 = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.BarBtnNapKhoa = new DevExpress.XtraBars.BarButtonItem();
             this.barSubItem1 = new DevExpress.XtraBars.BarSubItem();
@@ -54,7 +55,7 @@
             this.barCheckItem1 = new DevExpress.XtraBars.BarCheckItem();
             this.barCheckItem2 = new DevExpress.XtraBars.BarCheckItem();
             this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
-            this.BarBtnTaiFilePDF = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem4 = new DevExpress.XtraBars.BarButtonItem();
             this.barSubItem3 = new DevExpress.XtraBars.BarSubItem();
             this.barDockingMenuItem1 = new DevExpress.XtraBars.BarDockingMenuItem();
@@ -69,30 +70,17 @@
             this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar1 = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
-            this.memoEditChuKy = new DevExpress.XtraEditors.MemoEdit();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.textEditSHA = new DevExpress.XtraEditors.TextEdit();
             this.progressBar = new System.Windows.Forms.ProgressBar();
             this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.repositoryItemTextEdit6 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             this.label1 = new System.Windows.Forms.Label();
-            this.ribbonPage3 = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.ribbonPageGroup6 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem5 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem7 = new DevExpress.XtraBars.BarButtonItem();
-            this.ribbonPageGroup7 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.barButtonItem8 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem9 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem10 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem11 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem12 = new DevExpress.XtraBars.BarButtonItem();
-            this.ribbonPageGroup8 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.barButtonItem13 = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.memoEditChuKy.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit5)).BeginInit();
@@ -101,18 +89,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemFontEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemColorPickEdit1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.memoEditChuKy.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditSHA.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit6)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
             // 
-            this.layoutControl1.Controls.Add(this.richEditControl1);
             this.layoutControl1.Controls.Add(this.memoEditChuKy);
+            this.layoutControl1.Controls.Add(this.richEditControlVanBan);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layoutControl1.Location = new System.Drawing.Point(0, 193);
             this.layoutControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -122,13 +109,23 @@
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
-            // richEditControl1
+            // memoEditChuKy
             // 
-            this.richEditControl1.Location = new System.Drawing.Point(132, 558);
-            this.richEditControl1.MenuManager = this.ribbonControl1;
-            this.richEditControl1.Name = "richEditControl1";
-            this.richEditControl1.Size = new System.Drawing.Size(1378, 20);
-            this.richEditControl1.TabIndex = 11;
+            this.memoEditChuKy.Location = new System.Drawing.Point(12, 556);
+            this.memoEditChuKy.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.memoEditChuKy.Name = "memoEditChuKy";
+            this.memoEditChuKy.Size = new System.Drawing.Size(1498, 22);
+            this.memoEditChuKy.StyleController = this.layoutControl1;
+            this.memoEditChuKy.TabIndex = 10;
+            // 
+            // richEditControlVanBan
+            // 
+            this.richEditControlVanBan.Location = new System.Drawing.Point(12, 32);
+            this.richEditControlVanBan.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.richEditControlVanBan.MenuManager = this.ribbonControl1;
+            this.richEditControlVanBan.Name = "richEditControlVanBan";
+            this.richEditControlVanBan.Size = new System.Drawing.Size(1498, 500);
+            this.richEditControlVanBan.TabIndex = 4;
             // 
             // ribbonControl1
             // 
@@ -153,24 +150,17 @@
             this.barCheckItem1,
             this.barCheckItem2,
             this.barButtonItem2,
-            this.BarBtnTaiFilePDF,
+            this.barButtonItem3,
             this.barButtonItem4,
             this.barSubItem3,
             this.barDockingMenuItem1,
             this.barEditItem2,
-            this.barEditItem5,
-            this.barButtonItem5,
-            this.barButtonItem7,
-            this.barButtonItem8,
-            this.barButtonItem9,
-            this.barButtonItem12,
-            this.barButtonItem13});
+            this.barEditItem5});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 31;
+            this.ribbonControl1.MaxItemId = 25;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
-            this.ribbonPage1,
-            this.ribbonPage3});
+            this.ribbonPage1});
             this.ribbonControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemTextEdit1,
             this.repositoryItemTextEdit2,
@@ -332,13 +322,12 @@
             this.barButtonItem2.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem2.ImageOptions.SvgImage")));
             this.barButtonItem2.Name = "barButtonItem2";
             // 
-            // BarBtnTaiFilePDF
+            // barButtonItem3
             // 
-            this.BarBtnTaiFilePDF.Caption = "Load PDF";
-            this.BarBtnTaiFilePDF.Id = 18;
-            this.BarBtnTaiFilePDF.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("BarBtnTaiFilePDF.ImageOptions.SvgImage")));
-            this.BarBtnTaiFilePDF.Name = "BarBtnTaiFilePDF";
-            this.BarBtnTaiFilePDF.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BarBtnTaiFilePDF_ItemClick);
+            this.barButtonItem3.Caption = "Tải PDF";
+            this.barButtonItem3.Id = 18;
+            this.barButtonItem3.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem3.ImageOptions.SvgImage")));
+            this.barButtonItem3.Name = "barButtonItem3";
             // 
             // barButtonItem4
             // 
@@ -421,7 +410,7 @@
             // 
             this.ribbonPageGroup3.ItemLinks.Add(this.BarBtnTaiVanBan);
             this.ribbonPageGroup3.ItemLinks.Add(this.barButtonItem2);
-            this.ribbonPageGroup3.ItemLinks.Add(this.BarBtnTaiFilePDF);
+            this.ribbonPageGroup3.ItemLinks.Add(this.barButtonItem3);
             this.ribbonPageGroup3.ItemLinks.Add(this.barButtonItem4);
             this.ribbonPageGroup3.Name = "ribbonPageGroup3";
             this.ribbonPageGroup3.Text = "Load";
@@ -445,43 +434,36 @@
             this.ribbonStatusBar1.Ribbon = this.ribbonControl1;
             this.ribbonStatusBar1.Size = new System.Drawing.Size(1522, 28);
             // 
-            // memoEditChuKy
-            // 
-            this.memoEditChuKy.Location = new System.Drawing.Point(12, 32);
-            this.memoEditChuKy.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.memoEditChuKy.Name = "memoEditChuKy";
-            this.memoEditChuKy.Size = new System.Drawing.Size(1498, 522);
-            this.memoEditChuKy.StyleController = this.layoutControl1;
-            this.memoEditChuKy.TabIndex = 10;
-            // 
             // layoutControlGroup1
             // 
             this.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
             this.layoutControlGroup1.GroupBordersVisible = false;
             this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.layoutControlItem7,
-            this.layoutControlItem2});
-            this.layoutControlGroup1.Name = "Root";
+            this.layoutControlItem1,
+            this.layoutControlItem7});
+            this.layoutControlGroup1.Name = "layoutControlGroup1";
             this.layoutControlGroup1.Size = new System.Drawing.Size(1522, 590);
             this.layoutControlGroup1.TextVisible = false;
+            // 
+            // layoutControlItem1
+            // 
+            this.layoutControlItem1.Control = this.richEditControlVanBan;
+            this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlItem1.Name = "layoutControlItem1";
+            this.layoutControlItem1.Size = new System.Drawing.Size(1502, 524);
+            this.layoutControlItem1.Text = "Văn bản cần ký";
+            this.layoutControlItem1.TextLocation = DevExpress.Utils.Locations.Top;
+            this.layoutControlItem1.TextSize = new System.Drawing.Size(95, 17);
             // 
             // layoutControlItem7
             // 
             this.layoutControlItem7.Control = this.memoEditChuKy;
-            this.layoutControlItem7.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlItem7.Location = new System.Drawing.Point(0, 524);
             this.layoutControlItem7.Name = "layoutControlItem7";
-            this.layoutControlItem7.Size = new System.Drawing.Size(1502, 546);
+            this.layoutControlItem7.Size = new System.Drawing.Size(1502, 46);
             this.layoutControlItem7.Text = "Chữ ký điện tử";
             this.layoutControlItem7.TextLocation = DevExpress.Utils.Locations.Top;
-            this.layoutControlItem7.TextSize = new System.Drawing.Size(108, 17);
-            // 
-            // layoutControlItem2
-            // 
-            this.layoutControlItem2.Control = this.richEditControl1;
-            this.layoutControlItem2.Location = new System.Drawing.Point(0, 546);
-            this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(1502, 24);
-            this.layoutControlItem2.TextSize = new System.Drawing.Size(108, 16);
+            this.layoutControlItem7.TextSize = new System.Drawing.Size(95, 17);
             // 
             // textEditSHA
             // 
@@ -518,99 +500,6 @@
             this.label1.TabIndex = 10;
             this.label1.Text = "Hash SHA-256";
             // 
-            // ribbonPage3
-            // 
-            this.ribbonPage3.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.ribbonPageGroup6,
-            this.ribbonPageGroup7,
-            this.ribbonPageGroup8});
-            this.ribbonPage3.Name = "ribbonPage3";
-            this.ribbonPage3.Text = "Đọc File PDF";
-            // 
-            // ribbonPageGroup6
-            // 
-            this.ribbonPageGroup6.ItemLinks.Add(this.barButtonItem5);
-            this.ribbonPageGroup6.ItemLinks.Add(this.barButtonItem7);
-            this.ribbonPageGroup6.Name = "ribbonPageGroup6";
-            this.ribbonPageGroup6.Text = "Add";
-            // 
-            // barButtonItem3
-            // 
-            this.barButtonItem3.Caption = "Tải PDF";
-            this.barButtonItem3.Id = 18;
-            this.barButtonItem3.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem3.ImageOptions.SvgImage")));
-            this.barButtonItem3.Name = "barButtonItem3";
-            // 
-            // barButtonItem5
-            // 
-            this.barButtonItem5.Caption = "Tải File PDF";
-            this.barButtonItem5.Id = 25;
-            this.barButtonItem5.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem5.ImageOptions.SvgImage")));
-            this.barButtonItem5.Name = "barButtonItem5";
-            // 
-            // barButtonItem7
-            // 
-            this.barButtonItem7.Caption = "Lưu File";
-            this.barButtonItem7.Id = 26;
-            this.barButtonItem7.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem7.ImageOptions.SvgImage")));
-            this.barButtonItem7.Name = "barButtonItem7";
-            // 
-            // ribbonPageGroup7
-            // 
-            this.ribbonPageGroup7.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("ribbonPageGroup7.ImageOptions.SvgImage")));
-            this.ribbonPageGroup7.ItemLinks.Add(this.barButtonItem8);
-            this.ribbonPageGroup7.Name = "ribbonPageGroup7";
-            this.ribbonPageGroup7.Text = "Sign";
-            // 
-            // barButtonItem8
-            // 
-            this.barButtonItem8.Caption = "Ký File";
-            this.barButtonItem8.Id = 27;
-            this.barButtonItem8.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem8.ImageOptions.SvgImage")));
-            this.barButtonItem8.Name = "barButtonItem8";
-            // 
-            // barButtonItem9
-            // 
-            this.barButtonItem9.Caption = "Lưu Chữ Ký";
-            this.barButtonItem9.Id = 28;
-            this.barButtonItem9.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem9.ImageOptions.SvgImage")));
-            this.barButtonItem9.Name = "barButtonItem9";
-            this.barButtonItem9.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem9_ItemClick);
-            // 
-            // barButtonItem10
-            // 
-            this.barButtonItem10.Caption = "Ký File";
-            this.barButtonItem10.Id = 27;
-            this.barButtonItem10.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem10.ImageOptions.SvgImage")));
-            this.barButtonItem10.Name = "barButtonItem10";
-            // 
-            // barButtonItem11
-            // 
-            this.barButtonItem11.Caption = "Ký File";
-            this.barButtonItem11.Id = 27;
-            this.barButtonItem11.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem11.ImageOptions.SvgImage")));
-            this.barButtonItem11.Name = "barButtonItem11";
-            // 
-            // barButtonItem12
-            // 
-            this.barButtonItem12.Caption = "Lưu Chữ Ký";
-            this.barButtonItem12.Id = 29;
-            this.barButtonItem12.Name = "barButtonItem12";
-            // 
-            // ribbonPageGroup8
-            // 
-            this.ribbonPageGroup8.ItemLinks.Add(this.barButtonItem13);
-            this.ribbonPageGroup8.Name = "ribbonPageGroup8";
-            this.ribbonPageGroup8.Text = "ribbonPageGroup8";
-            // 
-            // barButtonItem13
-            // 
-            this.barButtonItem13.Caption = "Lưu Sign";
-            this.barButtonItem13.Id = 30;
-            this.barButtonItem13.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem13.ImageOptions.SvgImage")));
-            this.barButtonItem13.Name = "barButtonItem13";
-            this.barButtonItem13.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem13_ItemClick);
-            // 
             // FrmKyVanBan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -633,6 +522,7 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.memoEditChuKy.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit5)).EndInit();
@@ -641,10 +531,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemFontEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemColorPickEdit1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.memoEditChuKy.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditSHA.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit6)).EndInit();
             this.ResumeLayout(false);
@@ -655,7 +544,9 @@
         #endregion
 
         private DevExpress.XtraLayout.LayoutControl layoutControl1;
+        private DevExpress.XtraRichEdit.RichEditControl richEditControlVanBan;
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup1;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
         private DevExpress.XtraEditors.MemoEdit memoEditChuKy;
         private DevExpress.XtraEditors.TextEdit textEditSHA;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem7;
@@ -692,7 +583,7 @@
         private DevExpress.XtraBars.BarCheckItem barCheckItem1;
         private DevExpress.XtraBars.BarCheckItem barCheckItem2;
         private DevExpress.XtraBars.BarButtonItem barButtonItem2;
-        private DevExpress.XtraBars.BarButtonItem BarBtnTaiFilePDF;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem3;
         private DevExpress.XtraBars.BarButtonItem barButtonItem4;
         private DevExpress.XtraBars.BarSubItem barSubItem3;
         private DevExpress.XtraBars.BarDockingMenuItem barDockingMenuItem1;
@@ -701,20 +592,5 @@
         private DevExpress.XtraBars.BarEditItem barEditItem5;
         private DevExpress.XtraEditors.Repository.RepositoryItemColorPickEdit repositoryItemColorPickEdit1;
         private System.Windows.Forms.Label label1;
-        private DevExpress.XtraRichEdit.RichEditControl richEditControl1;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem5;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem7;
-        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage3;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup6;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem3;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem8;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem9;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup7;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem10;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem11;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem12;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem13;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup8;
     }
 }

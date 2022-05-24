@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmXacNhan));
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.progressBar = new System.Windows.Forms.ProgressBar();
+            this.richTextBoxChuKy = new System.Windows.Forms.RichTextBox();
             this.richEditControlVanBan = new DevExpress.XtraRichEdit.RichEditControl();
             this.ribbonControl1 = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.BarBtnNapKhoa = new DevExpress.XtraBars.BarButtonItem();
@@ -46,9 +47,6 @@
             this.repositoryItemTextEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             this.barEditItem2 = new DevExpress.XtraBars.BarEditItem();
             this.repositoryItemTextEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
-            this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -58,7 +56,6 @@
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.richTextBoxChuKy = new System.Windows.Forms.RichTextBox();
             this.textEditE = new DevExpress.XtraEditors.TextEdit();
             this.textEditN = new DevExpress.XtraEditors.TextEdit();
             this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -66,6 +63,9 @@
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
+            this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
@@ -99,6 +99,15 @@
             this.progressBar.Size = new System.Drawing.Size(1467, 25);
             this.progressBar.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.progressBar.TabIndex = 4;
+            // 
+            // richTextBoxChuKy
+            // 
+            this.richTextBoxChuKy.Location = new System.Drawing.Point(912, 141);
+            this.richTextBoxChuKy.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.richTextBoxChuKy.Name = "richTextBoxChuKy";
+            this.richTextBoxChuKy.Size = new System.Drawing.Size(567, 44);
+            this.richTextBoxChuKy.TabIndex = 16;
+            this.richTextBoxChuKy.Text = "";
             // 
             // richEditControlVanBan
             // 
@@ -233,27 +242,6 @@
             this.repositoryItemTextEdit2.AutoHeight = false;
             this.repositoryItemTextEdit2.Name = "repositoryItemTextEdit2";
             // 
-            // barButtonItem1
-            // 
-            this.barButtonItem1.Caption = "Tải PDF";
-            this.barButtonItem1.Id = 12;
-            this.barButtonItem1.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem1.ImageOptions.SvgImage")));
-            this.barButtonItem1.Name = "barButtonItem1";
-            // 
-            // barButtonItem2
-            // 
-            this.barButtonItem2.Caption = "Tải Ảnh";
-            this.barButtonItem2.Id = 13;
-            this.barButtonItem2.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem2.ImageOptions.SvgImage")));
-            this.barButtonItem2.Name = "barButtonItem2";
-            // 
-            // barButtonItem3
-            // 
-            this.barButtonItem3.Caption = "Tải Ecxel";
-            this.barButtonItem3.Id = 14;
-            this.barButtonItem3.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem3.ImageOptions.SvgImage")));
-            this.barButtonItem3.Name = "barButtonItem3";
-            // 
             // ribbonPage1
             // 
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -333,15 +321,6 @@
             this.layoutControlItem7.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem7.TextVisible = false;
             // 
-            // richTextBoxChuKy
-            // 
-            this.richTextBoxChuKy.Location = new System.Drawing.Point(912, 141);
-            this.richTextBoxChuKy.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.richTextBoxChuKy.Name = "richTextBoxChuKy";
-            this.richTextBoxChuKy.Size = new System.Drawing.Size(567, 44);
-            this.richTextBoxChuKy.TabIndex = 16;
-            this.richTextBoxChuKy.Text = "";
-            // 
             // textEditE
             // 
             this.textEditE.Location = new System.Drawing.Point(912, 81);
@@ -402,6 +381,27 @@
             this.labelControl4.Size = new System.Drawing.Size(12, 23);
             this.labelControl4.TabIndex = 19;
             this.labelControl4.Text = "E";
+            // 
+            // barButtonItem1
+            // 
+            this.barButtonItem1.Caption = "Tải PDF";
+            this.barButtonItem1.Id = 12;
+            this.barButtonItem1.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem1.ImageOptions.SvgImage")));
+            this.barButtonItem1.Name = "barButtonItem1";
+            // 
+            // barButtonItem2
+            // 
+            this.barButtonItem2.Caption = "Tải Ảnh";
+            this.barButtonItem2.Id = 13;
+            this.barButtonItem2.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem2.ImageOptions.SvgImage")));
+            this.barButtonItem2.Name = "barButtonItem2";
+            // 
+            // barButtonItem3
+            // 
+            this.barButtonItem3.Caption = "Tải Ecxel";
+            this.barButtonItem3.Id = 14;
+            this.barButtonItem3.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem3.ImageOptions.SvgImage")));
+            this.barButtonItem3.Name = "barButtonItem3";
             // 
             // FrmXacNhan
             // 
